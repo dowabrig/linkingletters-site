@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linking Letters | Bilingual pen-pal letters by mail for older adults</title>
+<meta name="description" content="Linking Letters is a bilingual (English/Spanish) mailed-letter subscription for seniors and anyone who could use more connection. Personal pen-pal letters with a prepaid reply envelope, written with AI help and personally reviewed and signed by Don Briggs. From $15/month.">
+<link rel="canonical" href="https://linkingletters.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Linking Letters">
+<meta property="og:title" content="Linking Letters: Give the gift of a letter">
+<meta property="og:description" content="Personal pen-pal letters by mail for older adults, in English, Spanish, or both. Prepaid reply envelope included. Large print available. From $15/month.">
+<meta property="og:url" content="https://linkingletters.com/">
+<meta property="og:image" content="https://linkingletters.com/don-briggs-square.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Don Briggs, founder of Linking Letters">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linking Letters: Give the gift of a letter">
+<meta name="twitter:description" content="Personal pen-pal letters by mail for older adults, in English, Spanish, or both. From $15/month.">
+<style>
+:root{
+  --bg:#FBF6EE; --paper:#FFFDF8; --ink:#2B2118; --muted:#54453A;
+  --accent:#A3401F; --accent-dark:#7E2F15; --green:#2F5D50; --green-dark:#22463C;
+  --sand:#F3E6D3; --line:#E2D2BC; --gold:#E9B44C;
+  --radius:14px; --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:19px;line-height:1.65}
+@media (min-width:900px){body{font-size:20px}}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .5em;color:var(--ink)}
+h1{font-size:clamp(2.1rem,5vw,3.4rem)}
+h2{font-size:clamp(1.75rem,3.6vw,2.4rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1em}
+a{color:var(--accent-dark)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;background:#fff;padding:10px;z-index:99}
+
+/* Language toggle: hide the inactive language */
+html[data-lang="en"] .es{display:none!important}
+html[data-lang="es"] .en{display:none!important}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:20;background:rgba(251,246,238,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.logo{font-family:Georgia,serif;font-size:1.35rem;font-weight:bold;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo svg{flex:none}
+nav.links{display:flex;gap:22px}
+nav.links a{color:var(--ink);text-decoration:none;font-size:1rem}
+nav.links a:hover{text-decoration:underline}
+@media (max-width:860px){nav.links{display:none}}
+.lang{display:flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden;flex:none}
+.lang button{font:inherit;font-size:1rem;font-weight:700;background:transparent;color:var(--ink);border:0;padding:8px 16px;min-height:44px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.lang .sep{width:2px;background:var(--ink)}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:15px 28px;border-radius:999px;min-height:52px;border:2px solid var(--accent);transition:background .15s}
+.btn:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.light{background:#fff;color:var(--green-dark);border-color:#fff}
+
+/* Hero */
+.hero{padding:64px 0 72px;background:radial-gradient(ellipse at 85% 10%,#F6DFC4 0,transparent 55%),var(--bg)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-art{order:-1;max-width:210px;margin:0 auto}.hero{padding-top:32px}}
+.eyebrow{display:inline-block;background:var(--sand);color:var(--accent-dark);font-weight:700;font-size:.95rem;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+.lead{font-size:1.15em;color:var(--muted);max-width:36em}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin:26px 0 14px}
+.fine{font-size:.95rem;color:var(--muted)}
+.hero-art{width:100%}
+
+/* Stats */
+.why{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin:28px 0}
+@media (max-width:640px){.stats{grid-template-columns:1fr}}
+.stat{background:var(--sand);border-radius:var(--radius);padding:24px 26px}
+.stat b{display:block;font-family:Georgia,serif;font-size:3rem;line-height:1;color:var(--accent-dark);margin-bottom:8px}
+.source{font-size:.92rem;color:var(--muted)}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px;counter-reset:s;list-style:none;padding:0}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+.steps li{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--green);color:#fff;font-family:Georgia,serif;font-size:1.4rem;font-weight:bold;margin-bottom:14px}
+
+/* Letter sample */
+.sample{background:var(--sand)}
+.sample .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+@media (max-width:860px){.sample .wrap{grid-template-columns:1fr}}
+.letter{background:#FFFEFA;border-radius:6px;padding:40px 40px 34px;box-shadow:0 12px 30px rgba(60,40,20,.15);font-family:Georgia,"Times New Roman",serif;font-size:1.05em;line-height:1.75;background-image:repeating-linear-gradient(#FFFEFA 0 calc(1.75em - 1px),#EFE4D3 calc(1.75em - 1px) 1.75em);transform:rotate(-.6deg)}
+@media (max-width:640px){.letter{padding:28px 22px;transform:none}}
+.letter .sig{font-style:italic;margin-top:1.2em}
+.tag{display:inline-block;font-size:.9rem;font-weight:700;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+
+/* Plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;align-items:stretch}
+@media (max-width:960px){.plans{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}}
+.plan{background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column}
+.plan.featured{border-color:var(--accent);box-shadow:0 10px 26px rgba(163,64,31,.12)}
+.plan .price{font-family:Georgia,serif;font-size:2.6rem;font-weight:bold;line-height:1.1;margin:6px 0 4px}
+.plan .price small{font-size:1rem;font-weight:normal;color:var(--muted);font-family:inherit}
+.plan ul{padding-left:1.2em;margin:16px 0 24px;flex:1}
+.plan li{margin-bottom:.45em}
+.plan .btn{text-align:center}
+.badge{align-self:flex-start;background:var(--accent);color:#fff;font-size:.85rem;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+
+/* Safety */
+.safety{background:var(--green);color:#fff}
+.safety h2,.safety h3{color:#fff}
+.safety .promise{font-family:Georgia,serif;font-size:clamp(1.3rem,2.6vw,1.75rem);line-height:1.45;background:var(--green-dark);border-left:6px solid var(--gold);padding:26px 28px;border-radius:8px;margin:24px 0 30px}
+.safety ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:18px 30px}
+@media (max-width:760px){.safety ul{grid-template-columns:1fr}}
+.safety li{padding-left:40px;position:relative}
+.safety li::before{content:"";position:absolute;left:0;top:.2em;width:26px;height:26px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='%2322463C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.safety a{color:#fff}
+
+/* About */
+.about .wrap{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center}
+@media (max-width:760px){.about .wrap{grid-template-columns:1fr}.about .photo{justify-self:center;max-width:280px}}
+.photo{aspect-ratio:4/5;max-width:300px;width:100%;margin:0;padding:8px;background:var(--paper);border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);box-shadow:0 10px 28px rgba(43,33,24,.14),0 0 0 6px var(--sand)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%;border-radius:var(--radius)}
+
+/* FAQ */
+.faq{background:var(--paper);border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:6px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.1em;padding:16px 40px 16px 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:10px;font-size:1.6em;color:var(--accent)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--ink);padding-bottom:10px;max-width:46em}
+.faq-list{max-width:860px}
+
+/* Final CTA + footer */
+.final{text-align:center;background:var(--sand)}
+.final p{max-width:34em;margin:0 auto 26px;color:var(--muted)}
+footer{background:var(--ink);color:#F3E9DC;padding:44px 0;font-size:1rem}
+footer a{color:#fff;display:inline-block;padding:8px 0}
+footer .plink{display:inline-block;padding:10px 0;min-height:44px}
+footer .cols{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main"><span class="en">Skip to content</span><span class="es" lang="es">Ir al contenido</span></a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Linking Letters">
+      <svg width="38" height="30" viewBox="0 0 38 30" aria-hidden="true"><rect x="1.5" y="1.5" width="35" height="27" rx="3" fill="#FFFDF8" stroke="#A3401F" stroke-width="3"/><path d="M3 4l16 13L35 4" fill="none" stroke="#A3401F" stroke-width="3" stroke-linejoin="round"/></svg>
+      Linking Letters
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#how"><span class="en">How it works</span><span class="es" lang="es">Cómo funciona</span></a>
+      <a href="#plans"><span class="en">Plans</span><span class="es" lang="es">Planes</span></a>
+      <a href="#safety"><span class="en">Safety</span><span class="es" lang="es">Seguridad</span></a>
+      <a href="#faq"><span class="en">FAQ</span><span class="es" lang="es">Preguntas</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-set-lang="en" aria-pressed="true" lang="en">EN</button>
+      <span class="sep" aria-hidden="true"></span>
+      <button type="button" data-set-lang="es" aria-pressed="false" lang="es">ES</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="en">
+        <span class="eyebrow">Pen-pal letters by mail · English &amp; Spanish</span>
+        <h1>Real letters in the mailbox, every month.</h1>
+        <p class="lead">Linking Letters is a letter subscription for older adults and anyone who could use a little more connection. You tell us about the person you love. Don Briggs writes to them in English, Spanish, or both, and they can write back.</p>
+      </div>
+      <div class="es" lang="es">
+        <span class="eyebrow">Cartas por correo · Español e inglés</span>
+        <h1>Cartas de verdad en el buzón, cada mes.</h1>
+        <p class="lead">Linking Letters es una suscripción de cartas por correo para personas mayores y para cualquiera que agradezca un poco más de compañía. Usted nos cuenta sobre su ser querido. Don Briggs le escribe en español, en inglés o en ambos idiomas, y su ser querido puede contestarle.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="#plans"><span class="en">Give the gift of a letter</span><span class="es" lang="es">Regale una carta</span></a>
+        <a class="btn ghost" href="#how"><span class="en">See how it works</span><span class="es" lang="es">Vea cómo funciona</span></a>
+      </div>
+      <p class="fine"><span class="en">From $15/month · Prepaid reply envelope · Large print available · Cancel anytime</span><span class="es" lang="es">Desde $15 al mes · Sobre de respuesta pagado · Letra grande disponible · Cancele cuando quiera</span></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 400 320" aria-hidden="true" focusable="false">
+      <ellipse cx="200" cy="292" rx="160" ry="14" fill="#E8D6BD"/>
+      <rect x="70" y="40" width="250" height="190" rx="8" fill="#FFFEFA" stroke="#D9C4A6" stroke-width="2" transform="rotate(-6 195 135)"/>
+      <g transform="rotate(-6 195 135)" stroke="#CDB797" stroke-width="5" stroke-linecap="round"><line x1="100" y1="80" x2="250" y2="80"/><line x1="100" y1="104" x2="290" y2="104"/><line x1="100" y1="128" x2="270" y2="128"/><line x1="100" y1="152" x2="230" y2="152"/></g>
+      <rect x="50" y="130" width="300" height="150" rx="10" fill="#A3401F"/>
+      <path d="M50 140 L200 225 L350 140" fill="none" stroke="#7E2F15" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M50 280 L160 205 M350 280 L240 205" stroke="#8E3519" stroke-width="4"/>
+      <path d="M200 196c-12-14-34-6-30 10 3 12 30 28 30 28s27-16 30-28c4-16-18-24-30-10z" fill="#E9B44C"/>
+      <rect x="290" y="150" width="42" height="50" rx="3" fill="#FFFDF8" stroke="#E9B44C" stroke-width="3" stroke-dasharray="5 3"/>
+    </svg>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="en">
+      <h2>Why a letter matters</h2>
+      <p>Feeling alone is more common than many of us realize. A report from the National Academies of Sciences, Engineering, and Medicine found:</p>
+    </div>
+    <div class="es" lang="es">
+      <h2>Por qué importa una carta</h2>
+      <p>La soledad es más común de lo que muchos imaginamos. Un informe de las Academias Nacionales de Ciencias, Ingeniería y Medicina de EE. UU. señala lo siguiente:</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>24%</b><span class="en">of adults age 65 and older are socially isolated.</span><span class="es" lang="es">de los adultos de 65 años o más viven en aislamiento social.</span></div>
+      <div class="stat"><b>43%</b><span class="en">of adults age 60 and older report feeling lonely.</span><span class="es" lang="es">de los adultos de 60 años o más dicen sentirse solos.</span></div>
+    </div>
+    <p class="en">A letter won't fix everything. But it is something to look forward to, something to hold in your hands, and someone to write back to.</p>
+    <p class="es" lang="es">Una carta no lo resuelve todo. Pero es algo que se espera con ilusión, algo que se puede tener en las manos y alguien a quien contestar.</p>
+    <p class="source"><span class="en">Source:</span><span class="es" lang="es">Fuente:</span> National Academies of Sciences, Engineering, and Medicine, <cite>Social Isolation and Loneliness in Older Adults</cite> (2020), via NCBI Bookshelf: <a href="https://www.ncbi.nlm.nih.gov/books/NBK557972/" rel="noopener">ncbi.nlm.nih.gov/books/NBK557972</a></p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <h2><span class="en">How it works</span><span class="es" lang="es">Cómo funciona</span></h2>
+    <ol class="steps">
+      <li>
+        <h3><span class="en">Tell us about them</span><span class="es" lang="es">Cuéntenos sobre su ser querido</span></h3>
+        <p class="en">Fill out a 10-minute questionnaire: their interests, the memories they love to talk about, topics to avoid, and their preferred language and print size.</p>
+        <p class="es" lang="es">Complete un cuestionario de 10 minutos: sus intereses, los recuerdos de los que le gusta hablar, los temas que es mejor evitar, y el idioma y el tamaño de letra que prefiere.</p>
+      </li>
+      <li>
+        <h3><span class="en">Don writes, reads, and signs</span><span class="es" lang="es">Don escribe, revisa y firma</span></h3>
+        <p class="en">Don Briggs drafts each letter with help from AI. Then he personally reads it, edits it, and signs it. No letter is mailed without his review.</p>
+        <p class="es" lang="es">Don Briggs redacta cada carta con ayuda de inteligencia artificial. Después la lee, la corrige y la firma personalmente. Ninguna carta se envía sin su revisión.</p>
+      </li>
+      <li>
+        <h3><span class="en">A letter arrives, and they can write back</span><span class="es" lang="es">Llega la carta y su ser querido puede contestar</span></h3>
+        <p class="en">Every letter includes a prepaid reply envelope. When your loved one writes back, Don reads the reply and answers it in the next letter.</p>
+        <p class="es" lang="es">Cada carta incluye un sobre de respuesta con el franqueo pagado. Cuando su ser querido contesta, Don lee su carta y le responde en la siguiente.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SAMPLE LETTER -->
+<section class="sample" id="sample">
+  <div class="wrap">
+    <div>
+      <div class="en">
+        <h2>What a letter looks like</h2>
+        <p>Here is a short example. Every real letter is written for one person, based on what you share with us and on what they write back.</p>
+        <p>Letters are printed (not handwritten) and personally signed by Don Briggs, simply as &ldquo;Don.&rdquo;</p>
+      </div>
+      <div class="es" lang="es">
+        <h2>Así es una carta</h2>
+        <p>Este es un ejemplo breve. Cada carta real se escribe para una sola persona, a partir de lo que usted nos cuenta y de lo que ella misma nos responde.</p>
+        <p>Las cartas son impresas (no escritas a mano) y Don Briggs las firma personalmente, simplemente como &laquo;Don&raquo;.</p>
+      </div>
+      <span class="tag"><span class="en">Sample letter: names and details are illustrative</span><span class="es" lang="es">Carta de ejemplo: los nombres y detalles son ilustrativos</span></span>
+    </div>
+    <article class="letter">
+      <div class="en">
+        <p>Dear Rosa,</p>
+        <p>Thank you for your last letter. I laughed out loud at your story about the rooster that woke up the whole street. And I keep thinking about what you said: that the best tamales are the ones made with too many people in the kitchen. I think you're right.</p>
+        <p>The leaves here are starting to turn, and it made me wonder: what was this time of year like where you grew up? Did you have a favorite season?</p>
+        <p>I'll be watching the mailbox for your answer.</p>
+        <p class="sig">Your pen pal,<br>Don</p>
+      </div>
+      <div class="es" lang="es">
+        <p>Querida Rosa:</p>
+        <p>Muchas gracias por su última carta. Me reí muchísimo con la historia del gallo que despertaba a toda la cuadra. Y me quedé pensando en lo que me dijo: que los mejores tamales son los que se hacen con demasiada gente en la cocina. Creo que tiene toda la razón.</p>
+        <p>Por aquí las hojas ya empiezan a cambiar de color, y me puse a pensar: ¿cómo era esta época del año en el lugar donde usted creció? ¿Tenía alguna estación favorita?</p>
+        <p>Quedo pendiente del buzón para leer su respuesta.</p>
+        <p class="sig">Su amigo por correspondencia,<br>Don</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section id="plans">
+  <div class="wrap">
+    <h2><span class="en">Plans and pricing</span><span class="es" lang="es">Planes y precios</span></h2>
+    <p class="en">Every plan includes letters in English, Spanish, or both, large print if needed, and a prepaid reply envelope with each letter.</p>
+    <p class="es" lang="es">Todos los planes incluyen cartas en español, en inglés o en ambos idiomas, letra grande si la necesita y un sobre de respuesta con franqueo pagado en cada carta.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3><span class="en">Monthly</span><span class="es" lang="es">Mensual</span></h3>
+        <div class="price">$15 <small><span class="en">/ month</span><span class="es" lang="es">al mes</span></small></div>
+        <ul class="en">
+          <li>2 personal letters a month</li>
+          <li>Prepaid reply envelope with every letter</li>
+          <li>English, Spanish, or both</li>
+          <li>Large print available</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <ul class="es" lang="es">
+          <li>2 cartas personales al mes</li>
+          <li>Sobre de respuesta con franqueo pagado en cada carta</li>
+          <li>En español, en inglés o en ambos</li>
+          <li>Letra grande disponible</li>
+          <li>Cancele cuando quiera</li>
+        </ul>
+        <a class="btn" href="https://buy.stripe.com/28E14pcxa9cl9qIb24eZ200"><span class="en">Start monthly letters</span><span class="es" lang="es">Elegir el plan mensual</span></a>
+      </div>
+      <div class="plan featured">
+        <span class="badge"><span class="en">More letters</span><span class="es" lang="es">Más cartas</span></span>
+        <h3>Premium</h3>
+        <div class="price">$25 <small><span class="en">/ month</span><span class="es" lang="es">al mes</span></small></div>
+        <ul class="en">
+          <li>4 personal letters a month</li>
+          <li>2 seasonal cards a year: Christmas and Easter, or another holiday your family prefers</li>
+          <li>Prepaid reply envelope with every letter</li>
+          <li>English, Spanish, or both; large print available</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <ul class="es" lang="es">
+          <li>4 cartas personales al mes</li>
+          <li>2 tarjetas de temporada al año: Navidad y Pascua de Resurrección, u otra festividad que su familia prefiera</li>
+          <li>Sobre de respuesta con franqueo pagado en cada carta</li>
+          <li>En español, en inglés o en ambos; letra grande disponible</li>
+          <li>Cancele cuando quiera</li>
+        </ul>
+        <a class="btn" href="https://buy.stripe.com/00wdRb2WAfAJ6ew9Y0eZ201"><span class="en">Choose Premium</span><span class="es" lang="es">Elegir Premium</span></a>
+      </div>
+      <div class="plan">
+        <h3><span class="en">3-month gift</span><span class="es" lang="es">Regalo de 3 meses</span></h3>
+        <div class="price">$42 <small><span class="en">one time</span><span class="es" lang="es">pago único</span></small></div>
+        <ul class="en">
+          <li>6 personal letters over 3 months</li>
+          <li>Prepaid reply envelope with every letter</li>
+          <li>The first letter explains who the gift is from</li>
+          <li>One payment, no automatic renewal</li>
+        </ul>
+        <ul class="es" lang="es">
+          <li>6 cartas personales durante 3 meses</li>
+          <li>Sobre de respuesta con franqueo pagado en cada carta</li>
+          <li>La primera carta explica de parte de quién es el regalo</li>
+          <li>Un solo pago, sin renovación automática</li>
+        </ul>
+        <a class="btn" href="https://buy.stripe.com/5kQcN77cQgENeL22vyeZ202"><span class="en">Give 3 months</span><span class="es" lang="es">Regalar 3 meses</span></a>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:22px"><span class="en">Prices in U.S. dollars. Letters can be mailed anywhere in the United States.</span><span class="es" lang="es">Precios en dólares estadounidenses. Las cartas se pueden enviar a cualquier lugar de Estados Unidos.</span></p>
+  </div>
+</section>
+
+<!-- SAFETY -->
+<section class="safety" id="safety">
+  <div class="wrap">
+    <div class="en">
+      <h2>Our safety promise</h2>
+      <p>Scams aimed at older adults are a real worry for families. So here is our promise, in plain words:</p>
+      <p class="promise">Linking Letters will never ask a letter recipient for money, passwords, bank details, Social Security or Medicare numbers, or any personal ID.</p>
+      <ul>
+        <li>If a letter ever asks for any of these things, it is not from us. Please don't respond, and contact us at <a href="mailto:don@linkingletters.com">don@linkingletters.com</a>.</li>
+        <li>Replies come back to Linking Letters in the prepaid reply envelope. Families receive our mailing details after signup.</li>
+        <li>If a reply raises a health, safety, or scam concern, we notify the family contact you gave us.</li>
+        <li>Don Briggs writes as a pen pal, always under his own name. He will never pretend to be a family member.</li>
+        <li>Only the person who buys the subscription pays for it. We never send a bill to the person receiving the letters.</li>
+      </ul>
+    </div>
+    <div class="es" lang="es">
+      <h2>Nuestra promesa de seguridad</h2>
+      <p>Las estafas dirigidas a personas mayores son una preocupación real para muchas familias. Por eso, esta es nuestra promesa, en palabras sencillas:</p>
+      <p class="promise">Linking Letters nunca le pedirá a quien recibe las cartas dinero, contraseñas, datos bancarios, números de Seguro Social o de Medicare, ni ningún documento de identidad.</p>
+      <ul>
+        <li>Si alguna carta le pide cualquiera de estas cosas, no es nuestra. Por favor, no responda y escríbanos a <a href="mailto:don@linkingletters.com">don@linkingletters.com</a>.</li>
+        <li>Las respuestas llegan a Linking Letters en el sobre de respuesta con franqueo pagado. Las familias reciben nuestros datos postales después de inscribirse.</li>
+        <li>Si una respuesta despierta alguna preocupación de salud, de seguridad o de posible estafa, avisamos al contacto familiar que usted nos indicó.</li>
+        <li>Don Briggs escribe como amigo por correspondencia, siempre con su propio nombre. Nunca se hará pasar por un familiar.</li>
+        <li>Solo quien compra la suscripción la paga. Nunca le enviamos cobros a la persona que recibe las cartas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <figure class="photo"><img src="don-briggs.jpg" width="960" height="1200" loading="lazy" decoding="async" alt="Don Briggs, founder of Linking Letters" data-alt-en="Don Briggs, founder of Linking Letters" data-alt-es="Don Briggs, fundador de Linking Letters"></figure>
+    <div>
+      <div class="en">
+        <h2>Meet Don Briggs</h2>
+        <p>Hi, I'm Don Briggs. Linking Letters is built on a simple idea: a letter in the mailbox still means something.</p>
+        <p>I'm fluent in English and Spanish, so I can write to your loved one in the language that feels most like home. I use AI to help me draft each letter. Then I read every one myself, make it right, and sign it. You'll see my letters signed simply &ldquo;Don.&rdquo;</p>
+      </div>
+      <div class="es" lang="es">
+        <h2>Conozca a Don Briggs</h2>
+        <p>Hola, soy Don Briggs. Linking Letters nace de una idea sencilla: una carta en el buzón todavía significa mucho.</p>
+        <p>Hablo y escribo con fluidez en español y en inglés, así que puedo escribirle a su ser querido en el idioma en que se sienta más en casa. Uso inteligencia artificial como apoyo para redactar cada carta. Después, la leo yo mismo, la corrijo y la firmo. Verá que mis cartas van firmadas simplemente &laquo;Don&raquo;.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2><span class="en">Questions families ask</span><span class="es" lang="es">Preguntas frecuentes</span></h2>
+    <div class="faq-list en">
+      <details><summary>Is it really a person?</summary><p>Yes. Don Briggs reads, edits, and signs every letter, and he reads every reply. Letters come from Don as a pen pal. They are never sent automatically, and they never pretend to come from a family member.</p></details>
+      <details><summary>Is AI used?</summary><p>Yes, and we want to be upfront about it. Don Briggs uses AI to help draft letters based on your questionnaire and your loved one's replies. Then he personally reads, edits, and signs each one. Letters are printed, not handwritten.</p></details>
+      <details><summary>What languages are the letters in?</summary><p>English, Spanish, or both. If you choose both, each letter is written in both languages. Tell us what feels most natural for your loved one. You can change it anytime.</p></details>
+      <details><summary>Can they write back?</summary><p>Yes, and we hope they will. Every letter includes a prepaid reply envelope addressed to Linking Letters. Don reads each reply and answers it in the next letter. Replying is always optional; letters keep coming either way.</p></details>
+      <details><summary>What if my parent has dementia or vision problems?</summary><p>Large print is available on every plan. If your loved one lives with memory loss, let us know in the questionnaire. We can keep letters short, warm, and easy to follow, stay with familiar topics, and avoid subjects that might cause worry. You know them best, so we follow your guidance.</p></details>
+      <details><summary>Can I cancel anytime?</summary><p>Yes. The Monthly plan ($15: 2 letters a month) and the Premium plan ($25: 4 letters a month plus two seasonal cards a year, for Christmas and Easter or another holiday your family prefers) can both be canceled at any time. The 3-month gift is a single payment and does not renew automatically.</p></details>
+      <details><summary>What about privacy?</summary><p>We use what you share only to write letters and to contact you about the subscription. We never sell your information. Details from the questionnaire and replies are used with an AI writing tool to help draft letters; we never include ID numbers or financial information. Replies are kept private, except that we contact you if a reply raises a health, safety, or scam concern. <a href="privacy.html">Read our privacy policy</a>.</p></details>
+      <details><summary>Can I see the letters first?</summary><p>Yes. If you'd like to read a letter before it's mailed, just email Don at <a href="mailto:don@linkingletters.com">don@linkingletters.com</a> and ask.</p></details>
+    </div>
+    <div class="faq-list es" lang="es">
+      <details><summary>¿De verdad hay una persona detrás?</summary><p>Sí. Don Briggs lee, corrige y firma cada carta, y lee cada respuesta. Las cartas son de Don, como amigo por correspondencia. Nunca se envían de forma automática y nunca se hacen pasar por un familiar.</p></details>
+      <details><summary>¿Se usa inteligencia artificial?</summary><p>Sí, y preferimos decirlo con claridad. Don Briggs usa inteligencia artificial como apoyo para redactar las cartas, a partir del cuestionario y de las respuestas de su ser querido. Después, él mismo lee, corrige y firma cada una. Las cartas son impresas, no escritas a mano.</p></details>
+      <details><summary>¿En qué idiomas se escriben las cartas?</summary><p>En español, en inglés o en ambos. Si elige los dos, cada carta se escribe en ambos idiomas. Díganos qué le resulta más natural a su ser querido; puede cambiarlo cuando quiera.</p></details>
+      <details><summary>¿Puede contestar las cartas?</summary><p>Sí, y ojalá lo haga. Cada carta incluye un sobre de respuesta con franqueo pagado, dirigido a Linking Letters. Don lee cada respuesta y la contesta en la siguiente carta. Contestar siempre es opcional: las cartas siguen llegando de todos modos.</p></details>
+      <details><summary>¿Y si mi mamá o mi papá tiene demencia o problemas de la vista?</summary><p>Todos los planes ofrecen letra grande. Si su ser querido tiene pérdida de memoria, indíquelo en el cuestionario. Podemos escribir cartas breves, cálidas y fáciles de seguir, sobre temas conocidos, y evitar asuntos que puedan inquietarle. Nadie conoce a su ser querido mejor que usted, así que seguimos sus indicaciones.</p></details>
+      <details><summary>¿Puedo cancelar cuando quiera?</summary><p>Sí. El plan Mensual ($15: 2 cartas al mes) y el plan Premium ($25: 4 cartas al mes y dos tarjetas de temporada al año, para Navidad y Pascua de Resurrección u otra festividad que su familia prefiera) se pueden cancelar en cualquier momento. El regalo de 3 meses es un solo pago y no se renueva automáticamente.</p></details>
+      <details><summary>¿Qué pasa con nuestra privacidad?</summary><p>Usamos la información que usted comparte solo para escribir las cartas y para comunicarnos con usted sobre la suscripción. Nunca vendemos sus datos. Algunos detalles del cuestionario y de las respuestas se procesan con una herramienta de inteligencia artificial para ayudar a redactar las cartas; nunca incluimos números de identificación ni datos financieros. Las respuestas se mantienen en privado, salvo que alguna despierte una preocupación de salud, de seguridad o de estafa: en ese caso, le avisamos a usted. <a href="privacy.html?lang=es">Lea nuestra política de privacidad</a>.</p></details>
+      <details><summary>¿Puedo leer las cartas antes de que se envíen?</summary><p>Sí. Si desea leer una carta antes de que se envíe, solo tiene que pedírselo a Don por correo electrónico a <a href="mailto:don@linkingletters.com">don@linkingletters.com</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2><span class="en">A letter is a small thing that can mean a lot.</span><span class="es" lang="es">Una carta es algo pequeño que puede significar mucho.</span></h2>
+    <p class="en">Ten minutes of your time today. Something to look forward to in their mailbox, all month long.</p>
+    <p class="es" lang="es">Hoy, diez minutos de su tiempo. Para su ser querido, algo que esperar en el buzón todo el mes.</p>
+    <a class="btn" href="#plans"><span class="en">Give the gift of a letter</span><span class="es" lang="es">Regale una carta</span></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <strong>Linking Letters</strong> · linkingletters.com<br>
+      <span class="en">Contact:</span><span class="es" lang="es">Contacto:</span> <a href="mailto:don@linkingletters.com">don@linkingletters.com</a><br>
+      <span class="en">Mailing details are sent to families after signup.</span><span class="es" lang="es">Enviamos los datos postales a las familias después de inscribirse.</span><br>
+      <a href="privacy.html" class="plink en">Privacy policy</a><a href="privacy.html?lang=es" class="plink es" lang="es">Política de privacidad</a>
+    </div>
+    <div style="max-width:30em">
+      <span class="en">Letters are written with AI assistance and personally reviewed, edited, and signed by Don Briggs.</span>
+      <span class="es" lang="es">Las cartas se redactan con ayuda de inteligencia artificial y Don Briggs las revisa, corrige y firma personalmente.</span><br>
+      © 2026 Linking Letters
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var titles={en:"Linking Letters | Bilingual pen-pal letters by mail for older adults",
+              es:"Linking Letters | Cartas por correo en español e inglés para personas mayores"};
+  function setLang(l){
+    if(l!=="en"&&l!=="es")return;
+    root.setAttribute("data-lang",l);
+    root.setAttribute("lang",l);
+    document.title=titles[l];
+    var b=document.querySelectorAll("[data-set-lang]");
+    for(var i=0;i<b.length;i++){b[i].setAttribute("aria-pressed",b[i].getAttribute("data-set-lang")===l?"true":"false");}
+    var im=document.querySelectorAll("img[data-alt-"+l+"]");
+    for(var j=0;j<im.length;j++){im[j].setAttribute("alt",im[j].getAttribute("data-alt-"+l));}
+    try{localStorage.setItem("ll-lang",l);}catch(e){}
+  }
+  document.addEventListener("click",function(e){
+    var t=e.target.closest&&e.target.closest("[data-set-lang]");
+    if(t)setLang(t.getAttribute("data-set-lang"));
+  });
+  var q=(location.search.match(/[?&]lang=(en|es)/)||[])[1];
+  var saved=null;try{saved=localStorage.getItem("ll-lang");}catch(e){}
+  setLang(q||saved||"en");
+})();
+</script>
+</body>
+</html>
